@@ -1,4 +1,4 @@
-package com.amadeus.birds;
+//package com.amadeus.birds;
 
 public class Main
 {
