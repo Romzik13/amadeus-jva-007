@@ -8,7 +8,7 @@ public class Main
         Shop shop = new Shop();
         shop.addBird("crow", 1);
         shop.addBird("eagle", 5);
-        shop.addBird("duck", 0.5);
+        shop.addBird("duck",  0.5);
 
         shop.addBirdStorage("crow", 20);
         shop.addBirdStorage("eagle", 23);

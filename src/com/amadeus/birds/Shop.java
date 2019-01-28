@@ -1,11 +1,15 @@
 //package com.amadeus.birds;
 
-public class Shop {
-    private String [] price;
-    private String [] quantity;
-    private String [] transactions;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
-    public void addBird(String birdName, int price){
+public class Shop {
+    private Map<String, Double> price = new HashMap<>();
+    private Map<String, Integer> quantity = new HashMap<>();
+    private ArrayList<Transaction> transactions = new HashMap<>();
+
+    public void addBird(String birdName, Double price){
 
     }
 
