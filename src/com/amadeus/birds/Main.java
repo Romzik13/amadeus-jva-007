@@ -6,29 +6,18 @@ public class Main
     public static void main(String[] args)
     {
         Shop shop = new Shop();
-        shop.addBird("crow", 1);
-        shop.addBird("eagle", 5);
-        shop.addBird("duck",  0.5);
+        shop.addBird("crow", 1.0, 20);
+        shop.addBird("eagle", 5.0, 23);
+        shop.addBird("duck",  0.5, 4);
 
-        shop.addBirdStorage("crow", 20);
-        shop.addBirdStorage("eagle", 23);
-        shop.addBirdStorage("duck", 4);
+        shop.buyBirds("Customer1" , "crow", 3);
+        shop.buyBirds("Customer1" , "eagle", 2);
+        shop.buyBirds("Customer1" , "duck", 1);
 
-        shop.buyBirds("Customer1" , "crow");
-        shop.buyBirds("Customer1" , "crow");
-        shop.buyBirds("Customer1" , "eagle");
-        shop.buyBirds("Customer1" , "duck");
+        shop.buyBirds("Customer2" , "eagle", 3);
+        shop.buyBirds("Customer2" , "duck", 1);
 
-        shop.buyBirds("Customer2" , "eagle");
-        shop.buyBirds("Customer2" , "eagle");
-        shop.buyBirds("Customer2" , "eagle");
-        shop.buyBirds("Customer2" , "duck");
-
-        shop.buyBirds("Customer2" , "duck");
-        shop.buyBirds("Customer2" , "duck");
-        shop.buyBirds("Customer2" , "duck");
-
-        System.out.println("Demo asdasdasd!!!");
+        shop.buyBirds("Customer2" , "duck", 3);
 
         System.out.println("Birds sale "+ shop.getBirdsSale("crow") + "ворон на сумму" + shop.getSoldBirdsMoney("crow"));
         System.out.println("Birds sale "+ shop.getBirdsSale("eagle") + "орлов на сумму" + shop.getSoldBirdsMoney("eagle"));

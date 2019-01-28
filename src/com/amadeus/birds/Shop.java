@@ -5,19 +5,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Shop {
-    private Map<String, Double> price = new HashMap<>();
-    private Map<String, Integer> quantity = new HashMap<>();
-    private ArrayList<Transaction> transactions = new HashMap<>();
-
-    public void addBird(String birdName, Double price){
-
+    private Map<Object, String> storage = new HashMap<>();
+    private ArrayList<Transaction> transactions = new ArrayList<>();
+    public void addBird(String birdName, Double price, int quantity){
+        Bird bird = new Bird(birdName, price, quantity);
+        storage.put(bird, birdName);
     }
 
-    public void addBirdStorage(String birdName, int quantity){
-
-    }
-
-    public void buyBirds(String customer, String nameBird){
+    public void buyBirds(String customer, String nameBird, int quantuty){
 
     }
 
