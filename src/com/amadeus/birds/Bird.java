@@ -1,7 +1,7 @@
 public class Bird {
     private String birdName;
     private Double birdPrice;
-    private int quantity;
+    private static int quantity;
 
     public Bird(String birdName, Double birdPrice, int quantity) {
         this.birdName = birdName;
@@ -17,7 +17,11 @@ public class Bird {
         return birdPrice;
     }
 
-    public int getQuantity() {
+    public static int getQuantity() {
         return quantity;
+    }
+
+    public static void setQuantity(int quantity) {
+        Bird.quantity = quantity;
     }
 }

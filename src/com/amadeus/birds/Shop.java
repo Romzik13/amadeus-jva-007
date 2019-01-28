@@ -5,11 +5,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Shop {
-    private Map<Object, String> storage = new HashMap<>();
+    private Map<String, Object> storage = new HashMap<>();
     private ArrayList<Transaction> transactions = new ArrayList<>();
-    public void addBird(String birdName, Double price, int quantity){
+
+    public void addBird(String birdName, Double price, Integer quantity){
+        if(storage.containsKey(birdName)){
+            System.out.println("Такая птица уже есть");
+        };
         Bird bird = new Bird(birdName, price, quantity);
-        storage.put(bird, birdName);
+        storage.put(birdName, bird);
+
+    }
+
+    public void addBirdStorage(String birdName, int quantity){
+
     }
 
     public void buyBirds(String customer, String nameBird, int quantuty){
